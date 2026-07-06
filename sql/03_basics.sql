@@ -7,4 +7,4 @@ FROM discharges
 WHERE med_surg = 'Surgical'
 GROUP BY drg_description
 ORDER BY cases DESC
-LIMIT 15;
+LIMIT 25;
