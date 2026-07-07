@@ -1,6 +1,5 @@
-SELECT facility_name,
-       COUNT(*) AS discharges
-FROM discharges
-GROUP BY facility_name
-ORDER BY discharges DESC
-LIMIT 15;
+select med_surg, count(*)
+from discharges
+where med_surg is not null
+  and med_surg <> 'Not Applicable'
+group by med_surg
