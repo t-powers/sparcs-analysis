@@ -1,5 +1,10 @@
-select med_surg, count(*)
+select
+    drg_description,
+    facility_name,
+    length_of_stay,
+    severity_desc,
+    total_charges
 from discharges
-where med_surg is not null
-  and med_surg <> 'Not Applicable'
-group by med_surg
+where total_charges is not null
+order by total_charges desc
+limit 10;
