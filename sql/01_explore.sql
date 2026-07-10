@@ -1,16 +1,3 @@
---
--- select
---     drg_description,
---     facility_name,
---     length_of_stay,
---     severity_desc,
---     total_charges
--- from discharges
--- where total_charges is not null
--- order by total_charges desc
--- limit 10;
-
-
 -- Elective TKA (drg 326), age group 50 to 69, facilities los is 4 or more.
 -- Core population reviewed, facility case min 30.
 select
